@@ -15,3 +15,7 @@ The assignment was to construct a multi-section landing page dynamically, to pra
 ## Development Process
 
 1.) I began the planning phase by carefully examining the instructions, rubric, and walkthrough for the project. I created an organized to-do list from the instructions and rubric, and took notes while going through the walkthrough slides presented by our session lead, Sharynne. I then spent hours reviewing all the concepts we had learned throughout the program, such as HTML, CSS, and JavaScript. To finish the planning phase, I wrote out the copy for the entire page so I could focus on solving and building from that point onward.
+
+2.) During the prototyping phase, I sketched a rough wireframe of the landing page's key elements and design. To structure my code, I created a visual representation of the wireframe on a whiteboard. This allowed me to quickly add and erase elements, speeding up the design process. I also gathered and built assets, such as SVGs, color palettes, fonts, and custom PNGs, with intention and efficiency.
+
+3.) I kicked off the development stage by creating the HTML of the landing page, adhering to the copy and integrating the assets. I made sure the code was clean and accurate, forming the foundation for the rest of the project. To ensure the code met HTML standards, I also ran the page through a validator.
