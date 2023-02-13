@@ -11,12 +11,21 @@
 
 /* ---- Base Rules ---- */
 body {
-    background: #450CA1;
+    background: #310b65;
     margin: 0;
     font-family: 'Montserrat', serif;
     color: #F8F6F4;
+    background-image: linear-gradient(180deg,
+            hsl(265deg 85% 13%) 0%,
+            hsl(276deg 75% 13%) 17%,
+            hsl(285deg 65% 12%) 33%,
+            hsl(295deg 55% 12%) 50%,
+            hsl(266deg 42% 12%) 67%,
+            hsl(240deg 29% 11%) 83%,
+            hsl(213deg 17% 10%) 100%);
 }
 
+/* All Links */
 .main-link {
     color: #F8F6F4;
     text-decoration: none;
@@ -26,7 +35,8 @@ body {
     color: #A887F4;
 }
 
-/* Typography General*/
+/* ** Typography General ** */
+/* Small Header Title */
 .page-title {
     font-size: 1.1rem;
     margin: 1.6em 1em 0;
@@ -35,6 +45,7 @@ body {
     opacity: 0.9;
 }
 
+/* Header on Hero */
 h1 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
@@ -53,29 +64,54 @@ h1 {
     }
 }
 
+/* Bottom Section of Hero */
 .heroBottomFold {
     display: grid;
     grid-template-columns: 40% 1fr;
     grid-template-rows: 1fr;
 }
 
+/* Hero Paragraph */
 .hero-copy {
-    margin: 2em 3em 0 -2em;
+    margin: 2em 3em 3em -2em;
     font-size: 1.2rem;
     text-align: justify;
     grid-area: 1 / 2 / 2 / 3;
 }
 
+/* Section Headers */
 h2 {
-    border-bottom: 1px solid #8c9494;
+    border-bottom: 2px solid #D8F6F45D;
     font-family: 'Oxygen', Sans-Serif;
-    font-size: 3em;
-    color: #F8F6F4;
+    font-size: 4em;
+    color: transparent;
+    -webkit-text-stroke: #F8F6F4D1;
+    -webkit-text-stroke-width: 1.3px;
 }
 
+h3 {
+    font-family: 'Oxygen', Sans-Serif;
+    font-size: 2em;
+}
+
+/* All Paragraphs */
 p {
     line-height: 1.6em;
     color: #F8F6F4;
+}
+
+/* Call to Action Link */
+.contactText {
+    color: #F8F6F4;
+    border: 1px solid #F8F6F4D1;
+    border-radius: 50%;
+    padding: 0.5em;
+}
+
+.contactText:hover {
+    border: 1px solid transparent;
+    cursor: pointer;
+    font-size: 1.05em;
 }
 
 /* ---- Layout Rules ---- */
@@ -93,6 +129,116 @@ section {
     min-height: 80vh;
 }
 
+/* Sun SVG in Values Section */
+.sunRaySvg {
+    width: 40%;
+    float: right;
+    padding: 1em;
+    max-width: 11em;
+    opacity: 0.9;
+}
+
+/* Phases Section in Process Section */
+#processPhases {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -2em;
+}
+
+#processPhases>h3 {
+    text-align: center;
+    opacity: 0.9;
+}
+
+/* Spiral SVG in Values Section */
+.spiralArrowSvg {
+    width: 60%;
+    max-width: 12em;
+    opacity: 0.9;
+    transform: rotate(180deg);
+    margin-bottom: 2em;
+}
+
+/* Diamond SVG in Journey Section */
+.diamondSvg {
+    width: 40%;
+    float: right;
+    padding: 1em;
+    max-width: 11em;
+    opacity: 0.9;
+}
+
+/* ******* SLIDER ********* */
+.mySlides {
+    display: none;
+}
+
+.w3-left,
+.w3-right,
+.w3-badge {
+    cursor: pointer;
+}
+
+.w3-badge {
+    height: 13px;
+    width: 13px;
+    padding: 0;
+}
+
+.w3-display-container {
+    max-width: 800px;
+}
+
+/* ******* END SLIDER ********* */
+/* Contact Information */
+#contact-info {
+    padding: 2em 4em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.3em;
+}
+
+/* All Contact Info Lists */
+#contact-info>ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.info {
+    font-size: 1.25em;
+}
+
+/* Contact Info Links on Hover */
+.info:hover {
+    font-size: 1.35em;
+}
+
+/* Social Link List */
+#bottom-socials {
+    display: flex;
+}
+
+/* All Social Links */
+.socials {
+    font-size: 1em;
+    text-decoration: none;
+    border: 1px solid #F8F6F4D1;
+    padding: 0.75em;
+    border-radius: 120px;
+    margin: 1rem;
+}
+
+/* Social Links On Hover */
+.socials:hover {
+    font-size: 1.15em;
+    color: #A887F4;
+    border: 1px solid #A887F4;
+}
 
 /* ---- Module Rules ---- */
 
@@ -133,7 +279,7 @@ section {
 /* Footer Styles */
 .page__footer {
     text-align: center;
-    background: #161a1f;
+    background: #15191E;
     padding: 1em;
     color: #F8F6F4;
 }
@@ -147,8 +293,8 @@ section {
 /* Landing Container Styles */
 .landing__container {
     padding: 1em;
-    text-align: left;
-    border: 1px solid red;
+    font-size: 1em;
+    font-weight: 400;
 }
 
 @media only screen and (min-width: 35em) {
@@ -161,7 +307,6 @@ section {
 section:nth-of-type(even) .landing__container {
     margin-right: 0;
     margin-left: auto;
-    text-align: right;
 }
 
 /* Background Circles */
@@ -231,6 +376,7 @@ section:nth-of-type(3n + 1) .landing__container::after {
 section.your-active-class {
     background: rgb(0, 0, 0);
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+    border: 1px solid #f8f6f45d;
 }
 
 section.your-active-class .landing__container::before {
