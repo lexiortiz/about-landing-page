@@ -14,6 +14,8 @@
     />
     <!-- Load Styles -->
     <link href="./CSS/style.css" rel="stylesheet" />
+    <!-- Load Javascript -->
+    <script type="text/javascript" src="./Javascript/script.js"></script>
   </head>
   <body>
     <!-- HTML Follows BEM naming conventions 
@@ -61,7 +63,7 @@
             eager to explore new opportunities. If you'd like to collaborate,
             please don't hesitate to
             <span
-              ><a href="#section5" class="contactText main-link"
+              ><a href="#contact__container" class="contactText main-link"
                 >contact me.</a
               ></span
             >
@@ -112,49 +114,58 @@
           </p>
           <section id="processPhases">
             <img src="Assets/SVGs/spiral-arrow.svg" class="spiralArrowSvg" />
-            <h3>PHASES OF THE <br/>DEVELOPMENT PROCESS</h3>
-            <div class="w3-content w3-display-container">
-              <img
-                class="mySlides"
-                src="https://i.ibb.co/fpTfp8N/plan.png"
-                id="slidePlan"
-                width="100%"
-              />
-              <img
-                class="mySlides"
-                src="https://i.ibb.co/sgjG94w/prototype.png"
-                id="slideProto"
-                width="100%"
-              />
+            <h3>PHASES OF THE <br />DEVELOPMENT PROCESS</h3>
+            <!-- SLIDER START -->
+            <div class="imgSlider">
+              <span id="slide-1"></span>
+              <span id="slide-2"></span>
+              <span id="slide-3"></span>
+              <span id="slide-4"></span>
+              <span id="slide-5"></span>
+              <div class="imgContainer">
+                <img
+                  class="slides"
+                  src="https://i.ibb.co/fpTfp8N/plan.png"
+                  id="slidePlan"
+                  width="100%"
+                />
+                <img
+                  class="slides"
+                  src="https://i.ibb.co/sgjG94w/prototype.png"
+                  id="slideProto"
+                  width="100%"
+                />
 
-              <img
-                class="mySlides"
-                src="https://i.ibb.co/tqDqcbr/develop.png"
-                id="slideDev"
-                width="100%"
-              />
+                <img
+                  class="slides"
+                  src="https://i.ibb.co/tqDqcbr/develop.png"
+                  id="slideDev"
+                  width="100%"
+                />
 
-              <img
-                class="mySlides"
-                src="https://i.ibb.co/T1yVpGm/test.png"
-                id="slideTest"
-                width="100%"
-              />
+                <img
+                  class="slides"
+                  src="https://i.ibb.co/T1yVpGm/test.png"
+                  id="slideTest"
+                  width="100%"
+                />
 
-              <img
-                class="mySlides"
-                src="https://i.ibb.co/KDtDb2d/launch.png"
-                id="slideLaunch"
-                width="100%"
-              />
-              <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
-                <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)"></div>
-                <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)"></div>
-                <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
-                <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
-                <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+                <img
+                  class="slides"
+                  src="https://i.ibb.co/KDtDb2d/launch.png"
+                  id="slideLaunch"
+                  width="100%"
+                />
+              </div>
+              <div class="imgSliderButtons">
+                <a href="#slide-1">1</a>
+                <a href="#slide-2">2</a>
+                <a href="#slide-3">3</a>
+                <a href="#slide-4">4</a>
+                <a href="#slide-5">5</a>
               </div>
             </div>
+            <!-- SLIDER END -->
           </section>
         </div>
       </section>
@@ -165,27 +176,27 @@
             <p>
               After graduating high school, I was driven by my love for writing
               and decided to enroll in community college for a Communications
-              degree. However, I soon realized that it wasn't quite the right path
-              for me and decided to take a step back. Instead, I began exploring
-              everything that interested me, from creative writing, to photography
-              and graphic design.
+              degree. However, I soon realized that it wasn't quite the right
+              path for me and decided to take a step back. Instead, I began
+              exploring everything that interested me, from creative writing, to
+              photography and graphic design.
             </p>
-            <img src="Assets/SVGs/round-diamond.svg" class="diamondSvg"/>
+            <img src="Assets/SVGs/round-diamond.svg" class="diamondSvg" />
             <p>
-              That's when I discovered the potential of
-              websites and their endless capacity for innovation and
-              communication. I threw myself into learning HTML, CSS, and
-              JavaScript and was even lucky enough to be awarded a OneTen
-              scholarship for the Udacity Frontend Nanodegree Program. I've
-              fine-tuned my knowledge of web development and gained valuable
-              insights from senior software engineers who act as mentors. I'm set
-              to graduate in March 2023, feeling more confident than ever in my
-              ability to be an effective front end developer.
+              That's when I discovered the potential of websites and their
+              endless capacity for innovation and communication. I threw myself
+              into learning HTML, CSS, and JavaScript and was even lucky enough
+              to be awarded a OneTen scholarship for the Udacity Frontend
+              Nanodegree Program. I've fine-tuned my knowledge of web
+              development and gained valuable insights from senior software
+              engineers who act as mentors. I'm set to graduate in March 2023,
+              feeling more confident than ever in my ability to be an effective
+              front end developer.
             </p>
           </div>
         </div>
       </section>
-      <section id="section5" data-nav="Section 5">
+      <section id="contact__container" data-nav="Section 5">
         <div class="landing__container">
           <h2>CONTACT</h2>
           <p>
@@ -198,25 +209,23 @@
               <li>
                 <div>
                   <a href="mailto:alexisortiz.dev@gmail.com" class="main-link">
-                    <span class="info">
-                      alexisortiz.dev@gmail.com
-                    </span>
+                    <span class="contact-link"> alexisortiz.dev@gmail.com </span>
                   </a>
                 </div>
               </li>
               <li>
                 <a href="tel:470-737-5829" class="main-link">
-                  <span class="info">(470) 737-5829</span>
+                  <span class="contact-link">(470) 737-5829</span>
                 </a>
               </li>
             </ul>
-            <ul id="bottom-socials">
+            <ul id="contact-socials">
               <li>
                 <a
                   href="https://docs.google.com/document/d/e/2PACX-1vT1d30A4FyiE1uCnN0i2UfpCObOJtqiHBvHvbWumAdfrh8KtqpMv9VTLq7eN7BGYd3gUxXXbLTjOAtf/pub"
                   class="main-link"
                 >
-                  <span class="socials">Cover</span>
+                  <span class="social-link">Cover</span>
                 </a>
               </li>
               <li>
@@ -224,21 +233,20 @@
                   href="https://docs.google.com/document/d/e/2PACX-1vREp2935cn66PY1sgnkEmY51CFXK7t3XGcGOt7V93K98joDUQsMtRmCH6apnprZZgo_n61U9ceiNk50/pub"
                   class="main-link"
                 >
-                  <span class="socials">Resume</span>
+                  <span class="social-link">Resume</span>
                 </a>
               </li>
               <li>
-                <a href="https://www.linkedin.com/in/aortiz-dev/"
-                class="main-link"
+                <a
+                  href="https://www.linkedin.com/in/aortiz-dev/"
+                  class="main-link"
                 >
-                  <span class="socials">LinkedIn</span>
+                  <span class="social-link">LinkedIn</span>
                 </a>
               </li>
               <li>
-                <a href="https://github.com/lexiortiz"
-                class="main-link"
-                >
-                  <span class="socials">Github</span>
+                <a href="https://github.com/lexiortiz" class="main-link">
+                  <span class="social-link">Github</span>
                 </a>
               </li>
             </ul>
