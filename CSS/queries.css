@@ -1,0 +1,98 @@
+/* ** ALL MEDIA QUERIES ** */
+/* Media Queries for Small Screens/Phones */
+@media only screen and (max-width: 34em) {
+    /* Hero Paragraph */
+    .hero-copy {
+        text-align: center;
+        margin: 2em 0 3em 0;
+    }
+    /* Contact Inline-Link */
+    .contactText {
+        display: block;
+        float: right;
+        text-align: center;
+        width: 50%;
+        text-transform: uppercase;
+    }
+    .contactText:hover {
+        margin: auto;
+    }
+    /* Contact Inline-Link */
+    #processPhases {
+        margin-top: -2em;
+    }
+
+    /* *** SLIDER *** */
+    .imgSlider {
+        width: 95vw;
+        height: 300px;
+        margin: 2em;
+        margin-bottom: 0;
+        overflow: hidden;
+    }
+    /* Slider Image Container */
+    .imgContainer {
+        width: calc(100% - 95vw * 5);
+        height: 300px;
+        display: flex;
+    }
+    /* Slides */
+    .slides {
+        width: 95vw;
+        height: 300px;
+    }
+    /* Slider Image Targets */
+    #slide-1:target~.imgContainer {
+        left: calc(100% - (95vw * 1));
+    }
+
+    #slide-2:target~.imgContainer {
+        left: calc(100% - (95vw * 2));
+    }
+
+    #slide-3:target~.imgContainer {
+        left: calc(100% - (95vw * 3));
+    }
+
+    #slide-4:target~.imgContainer {
+        left: calc(100% - (95vw * 4));
+    }
+
+    #slide-5:target~.imgContainer {
+        left: calc(100% - (95vw * 5));
+    }
+    /* *** END OF SLIDER *** */
+    /* Contact Info Container */
+    #contact-socials {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 45vh;
+    }
+    /* Social Links */
+    .social-link {
+        font-size: 1em;
+    }
+}
+
+/* Media Queries for Large Screens */
+@media only screen and (min-width: 35em) {
+    /* Main Page Title */
+    .page-title {
+        margin: 1.6em 3em 0;
+    }
+
+    /* Main Headers */
+    h1 {
+        font-size: 3.7em;
+        margin: 0.5em 3rem 0;
+    }
+    h2 {
+        font-size: 4em;
+    }
+    /* Main Section Containers */
+    .landing__container {
+        max-width: 50em;
+        padding: 4em;
+    }
+}

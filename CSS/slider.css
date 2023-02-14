@@ -1,0 +1,77 @@
+/* Phases of the Development Process */
+/* *** SLIDER *** */
+.imgSlider {
+    width: 500px;
+    height: 300px;
+    background-color: #1D122B;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    text-align: center;
+    overflow: hidden;
+    border: 1px solid #F8F6F433;
+}
+
+.imgContainer {
+    width: 2500px;
+    background-color: #A887F4;
+    height: 300px;
+    clear: both;
+    position: relative;
+    -webkit-transition: left 2s;
+    -moz-transition: left 2s;
+    -o-transition: left 2s;
+    transition: left 2s;
+}
+
+.slides {
+    width: 500; 
+    height: 300;
+    margin: 0px;
+    padding: 0px;
+    float: left;
+    position: relative;
+}
+
+#slide-1:target~.imgContainer {
+    left: 0px;
+}
+
+#slide-2:target~.imgContainer {
+    left: -500px;
+}
+
+#slide-3:target~.imgContainer {
+    left: -1000px;
+}
+
+#slide-4:target~.imgContainer {
+    left: -1500px;
+}
+
+#slide-5:target~.imgContainer {
+    left: -2000px;
+}
+
+.imgSliderButtons {
+    position: relative;
+    top: -32px;
+}
+
+.imgSliderButtons a {
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    border-radius: 50px;
+    font-size: 1.2em;
+    background-color: #620759;
+    color: #F8F6F4D1;
+    text-decoration: none;
+    margin: 0 0.1em;
+}
+
+.imgSliderButtons a:hover {
+    cursor: pointer;
+    background-color: #57088C;
+    color: #D18CFF;
+}

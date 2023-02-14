@@ -7,6 +7,9 @@
  * To learn more, visit: https://css-tricks.com/reboot-resets-reasoning/
  *
 */
+/* CSS IMPORTS */
+@import 'slider.css';
+@import 'queries.css';
 
 
 /* ---- Base Rules ---- */
@@ -25,7 +28,8 @@ body {
             hsl(213deg 17% 10%) 100%);
 }
 
-/* All Links */
+/* ** Typography General ** */
+/* All Main Links */
 .main-link {
     color: #F8F6F4;
     text-decoration: none;
@@ -35,7 +39,6 @@ body {
     color: #A887F4;
 }
 
-/* ** Typography General ** */
 /* Small Header Title */
 .page-title {
     font-size: 1.1rem;
@@ -53,17 +56,6 @@ h1 {
     margin: 1em 0.25em;
 }
 
-@media only screen and (min-width: 35em) {
-    .page-title {
-        margin: 1.6em 3em 0;
-    }
-
-    h1 {
-        font-size: 3.7em;
-        margin: 0.5em 3rem 0;
-    }
-}
-
 /* Bottom Section of Hero */
 .heroBottomFold {
     display: grid;
@@ -73,8 +65,9 @@ h1 {
 
 /* Hero Paragraph */
 .hero-copy {
+    width: 100%;
     margin: 2em 3em 3em -2em;
-    font-size: 1.2rem;
+    font-size: 1.2em;
     text-align: justify;
     grid-area: 1 / 2 / 2 / 3;
 }
@@ -83,7 +76,7 @@ h1 {
 h2 {
     border-bottom: 2px solid #D8F6F45D;
     font-family: 'Oxygen', Sans-Serif;
-    font-size: 4em;
+    font-size: 3em;
     color: transparent;
     -webkit-text-stroke: #F8F6F4D1;
     -webkit-text-stroke-width: 1.3px;
@@ -100,7 +93,7 @@ p {
     color: #F8F6F4;
 }
 
-/* Call to Action Link */
+/* Call to Action Inline-Links */
 .contactText {
     color: #F8F6F4;
     border: 1px solid #F8F6F4D1;
@@ -111,7 +104,8 @@ p {
 .contactText:hover {
     border: 1px solid transparent;
     cursor: pointer;
-    font-size: 1.05em;
+    font-size: 1.01em;
+    margin-left: -6px;
 }
 
 /* ---- Layout Rules ---- */
@@ -135,7 +129,7 @@ section {
     float: right;
     padding: 1em;
     max-width: 11em;
-    opacity: 0.9;
+    opacity: 0.8;
 }
 
 /* Phases Section in Process Section */
@@ -144,21 +138,23 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: -2em;
+    padding: -1em;
 }
 
-#processPhases>h3 {
-    text-align: center;
-    opacity: 0.9;
-}
-
-/* Spiral SVG in Values Section */
+/* Spiral SVG in Process Section */
 .spiralArrowSvg {
     width: 60%;
     max-width: 12em;
     opacity: 0.9;
     transform: rotate(180deg);
-    margin-bottom: 2em;
+    margin: 3em 0 1em 0;
+}
+
+/* Phases Header */
+#processPhases>h3 {
+    text-align: center;
+    font-weight: 500;
+    opacity: 0.9;
 }
 
 /* Diamond SVG in Journey Section */
@@ -170,28 +166,6 @@ section {
     opacity: 0.9;
 }
 
-/* ******* SLIDER ********* */
-.mySlides {
-    display: none;
-}
-
-.w3-left,
-.w3-right,
-.w3-badge {
-    cursor: pointer;
-}
-
-.w3-badge {
-    height: 13px;
-    width: 13px;
-    padding: 0;
-}
-
-.w3-display-container {
-    max-width: 800px;
-}
-
-/* ******* END SLIDER ********* */
 /* Contact Information */
 #contact-info {
     padding: 2em 4em;
@@ -200,32 +174,32 @@ section {
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 1.3em;
+    font-size: 1.1em;
 }
 
-/* All Contact Info Lists */
+/* Contact Info List */
 #contact-info>ul {
     list-style-type: none;
     padding: 0;
 }
 
-/* Contact Info Links */
-.info {
+/* Contact Links */
+.contact-link {
     font-size: 1.25em;
 }
 
-/* Contact Info Links on Hover */
-.info:hover {
+/* Contact Links on Hover */
+.contact-link:hover {
     font-size: 1.35em;
 }
 
-/* Social Link List */
-#bottom-socials {
+/* Social List */
+#contact-socials {
     display: flex;
 }
 
-/* All Social Links */
-.socials {
+/* Social Links */
+.social-link {
     font-size: 1em;
     text-decoration: none;
     border: 1px solid #F8F6F4D1;
@@ -235,7 +209,7 @@ section {
 }
 
 /* Social Links On Hover */
-.socials:hover {
+.social-link:hover {
     font-size: 1.15em;
     color: #A887F4;
     border: 1px solid #A887F4;
@@ -296,13 +270,6 @@ section {
     padding: 1em;
     font-size: 1em;
     font-weight: 400;
-}
-
-@media only screen and (min-width: 35em) {
-    .landing__container {
-        max-width: 50em;
-        padding: 4em;
-    }
 }
 
 section:nth-of-type(even) .landing__container {
@@ -377,7 +344,7 @@ section:nth-of-type(3n + 1) .landing__container::after {
 section.your-active-class {
     background: rgb(0, 0, 0);
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
-    border: 1px solid #f8f6f45d;
+    border: 1px solid #F8F6F45D;
 }
 
 section.your-active-class .landing__container::before {
