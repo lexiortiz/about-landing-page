@@ -26,51 +26,37 @@
 const navList = document.getElementById('navbar__list');
 
 // Accessing All (5) Sections
-const biographySection = document.getElementById('section1');
-const valuesSection = document.getElementById('section2');
-const processSection = document.getElementById('section3');
-const journeySection = document.getElementById('section4');
-const contactSection = document.getElementById('contact__container');
+const sections = document.querySelectorAll('section');
 
-// Creating List Item Elements, Each with a Class
-const biographyItem = document.createElement('li');
-biographyItem.classList.add('navbar__item');
-
-const valuesItem = document.createElement('li');
-valuesItem.classList.add('navbar__item');
-
-const processItem = document.createElement('li');
-processItem.classList.add('navbar__item');
-
-const journeyItem = document.createElement('li');
-journeyItem.classList.add('navbar__item');
-
-const contactItem = document.createElement('li');
-contactItem.classList.add('navbar__item');
-
-
-// Creating Link Elements, Each with a Class
-const biographyLink = document.createElement('a');
-biographyLink.classList.add('navbar__link');
-
-const valuesLink = document.createElement('a');
-valuesLink.classList.add('navbar__link');
-
-const processLink = document.createElement('a');
-processLink.classList.add('navbar__link');
-
-const journeyLink = document.createElement('a');
-journeyLink.classList.add('navbar__link');
-
-const contactLink = document.createElement('a');
-contactLink.classList.add('navbar__link');
+// Accessing All '.landing__container' Divs
+const containers = document.querySelectorAll('.landing__container');
 
 /**
  * ** END GLOBAL VARIABLES **
  * ** START HELPER FUNCTIONS **
  * 
 */
-
+// Getting Text For Links From Container Headings
+const getLinkText = () => {
+    // Creating An Array To Store Text
+    const textArray = []
+    // Iterating Through Container Divs
+    containers.forEach((container) => {
+        // Accessing Container Headings
+        const containerHeadings = container.querySelectorAll('h2');
+        // Iterating Through Container Headings
+        containerHeadings.forEach((heading) => {
+            // Creating a Class on the Headings
+            heading.classList.add('container__heading');
+            // Getting the Heading innerText
+            const text = heading.innerText;
+            // Push Heading innerText to Array
+            textArray.push(text);
+        });
+    });
+    // Return the Array of Text
+    return textArray;
+};
 
 
 /**
@@ -78,29 +64,29 @@ contactLink.classList.add('navbar__link');
  * ** BEGIN MAIN FUNCTIONS **
  * 
 */
-
-// BUILD NAV
-// Inserting HTML Content on Link Elements
-biographyLink.innerHTML = 'BIOGRAPHY';
-valuesLink.innerHTML = 'VALUES';
-processLink.innerHTML = 'PROCESS';
-journeyLink.innerHTML = 'JOURNEY';
-contactLink.innerHTML = 'CONTACT';
-
-// Appending Link Elements to Navbar Items
-biographyItem.append(biographyLink);
-valuesItem.append(valuesLink);
-processItem.append(processLink);
-journeyItem.append(journeyLink);
-contactItem.append(contactLink);
-
-// Appending Navbar Items to Navbar List
-navList.append(biographyItem);
-navList.append(valuesItem);
-navList.append(processItem);
-navList.append(journeyItem);
-navList.append(contactItem);
-
+// Building Nav
+const buildNav = () => {
+    // Creating a Class on the Navbar
+    navList.classList.add('navbar__menu');
+    
+    // Iterating Through Sections NodeList
+    sections.forEach((section, index) => {
+        // Creating List Item Element
+        const listItem = document.createElement('li');
+        // Creating Class on List Item
+        listItem.classList.add('navbar__item');
+        // Create a Link Element
+        const link = document.createElement('a');
+        // Creating Class on Link Element
+        link.classList.add('menu__link');
+        // Inserting HTML Content on Link Element
+        link.innerHTML = getLinkText()[index];
+        // Appending Link Elements to Navbar Items
+        listItem.append(link);
+        // Appending List Items to Navbar
+        navList.append(listItem);
+    });
+};
 
 // Add class 'active' to section when near top of viewport
 
@@ -114,11 +100,23 @@ navList.append(contactItem);
  * 
 */
 
+// After All Content Is Fully Loaded
 document.addEventListener('DOMContentLoaded', function () {
-    // Build menu
-    
-    // Scroll to section on link click
+    // Build Menu
+    buildNav();
 
-    // Set sections as active
+    // Iterating Through Sections NodeList
+    sections.forEach((section) => {
+        // For Each Section, Listen for the Click Event
+        section.addEventListener('click', function (event) {
+            // Scroll to section on link click
+            navItem.forEach((item) => {
+                item.addEventListener('click', function () {
+                    // Scroll to Section
+                });
+            });
 
+            // Set sections as active
+        })
+    });
 });
