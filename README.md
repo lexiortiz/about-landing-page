@@ -19,3 +19,7 @@ The assignment was to construct a multi-section landing page dynamically, to pra
 2.) During the prototyping phase, I sketched a rough wireframe of the landing page's key elements and design. To structure my code, I created a visual representation of the wireframe on a whiteboard. This allowed me to quickly add and erase elements, speeding up the design process. I also gathered and built assets, such as SVGs, color palettes, fonts, and custom PNGs, with intention and efficiency.
 
 3.) I kicked off the development phase by constructing the HTML of the landing page, following the copy and incorporating the assets. I made sure the code was neat and precise, forming the basis for the remainder of the project. To guarantee the code conformed to HTML standards, I also ran the page through a validator. Afterwards, I styled the HTML elements with CSS. I made them responsive with fluid styling and media queries, to guarantee the landing page is compatible on all devices.
+
+It was finally time to script the dynamic navigation menu for the landing page. I debugged in the console and applied the DRY (Don't Repeat Yourself) principle to write efficient and meaningful code.
+
+Next, I will distinguish the sections in view and add the ability for the page to scroll to them.
