@@ -1,6 +1,12 @@
 /* ** ALL MEDIA QUERIES ** */
 /* Media Queries for Small Screens/Phones */
 @media only screen and (max-width: 34em) {
+    .navbar__menu ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
     /* Hero Paragraph */
     .hero-copy {
         text-align: center;
