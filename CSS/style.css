@@ -34,7 +34,7 @@ body {
     color: #F8F6F4;
     text-decoration: none;
 }
-
+/* All Main Links On Hover */
 .main-link:hover {
     color: #A887F4;
 }
@@ -52,7 +52,6 @@ body {
 h1 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-    font-size: 3.2em;
     margin: 1em 0.25em;
 }
 
@@ -68,7 +67,6 @@ h1 {
     width: 100%;
     margin: 2em 3em 3em -2em;
     font-size: 1.2em;
-    text-align: justify;
     grid-area: 1 / 2 / 2 / 3;
 }
 
@@ -100,7 +98,7 @@ p {
     border-radius: 50%;
     padding: 0.5em;
 }
-
+/* CTA Inline-Links On Hover */
 .contactText:hover {
     border: 1px solid transparent;
     cursor: pointer;
@@ -113,14 +111,15 @@ main {
     margin: 10vh 1em 10vh;
 }
 
-.main__hero {
-    min-height: 40vh;
-    padding-top: 3em;
-}
-
 section {
     position: relative;
     min-height: 80vh;
+}
+
+/* Hero Section */
+.main__hero {
+    min-height: 40vh;
+    padding-top: 3em;
 }
 
 /* Sun SVG in Values Section */
@@ -132,7 +131,7 @@ section {
     opacity: 0.8;
 }
 
-/* Phases Section in Process Section */
+/* Phases Div in Process Section */
 #processPhases {
     display: flex;
     flex-direction: column;
@@ -183,11 +182,6 @@ section {
     padding: 0;
 }
 
-/* Contact Links */
-.contact-link {
-    font-size: 1.25em;
-}
-
 /* Contact Links on Hover */
 .contact-link:hover {
     font-size: 1.35em;
@@ -215,9 +209,31 @@ section {
     border: 1px solid #A887F4;
 }
 
+/* Back To Top Button */
+.backToTop__btn {
+    background: #20092EED;
+    color:#EDD8F3;
+    font-size: 1em;
+    text-decoration: none;
+    border: 1px solid #F8F6F4D1;
+    padding: 0.75em;
+    border-radius: 120px;
+    margin: auto;
+}
+
+/* Back To Top Button On Hover */
+.backToTop__btn:hover {
+    font-size: 1.05em;
+    color: #A887F4;
+    border: 1px solid #A887F4;
+    cursor: pointer;
+}
+
 /* ---- Module Rules ---- */
-/* Navigation Styles*/
-.navbar__menu ul {
+/* Navigation Styles */
+/* Nav Menu & List */
+.navbar__menu ul,
+#navbar__list {
     padding-left: 0;
     margin: 0;
     text-align: right;
@@ -231,11 +247,13 @@ section {
             hsla(266, 41%, 12%, 0.692) 100%);
 }
 
+/* Nav Menu Items */
 .navbar__menu li {
     display: inline-block;
 }
 
-.navbar__menu .menu__link {
+/* Nav List Links */
+#navbar__list .navbar__link {
     display: block;
     padding: 1em;
     font-weight: 500;
@@ -244,7 +262,8 @@ section {
     border: 2px solid transparent;
 }
 
-.navbar__menu .menu__link:hover {
+/* Nav List Links On Hover */
+#navbar__list .navbar__link:hover {
     color: #BEA8F1;
     transition: ease 0.4s all;
     cursor: pointer;
@@ -268,10 +287,10 @@ section {
     color: #F8F6F4;
 }
 
+/* Footer Paragraph */
 .page__footer p {
     color: #F8F6F4;
 }
-
 
 /* ---- Theme Rules ---- */
 /* Landing Container Styles */
@@ -350,10 +369,20 @@ section:nth-of-type(3n + 1) .landing__container::after {
 /* ---- Theme State Rules ---- */
 /* Section Active Styles */
 /* Note: your-active-class class is applied through javascript. You should update the class here and in the index.html to what you set in your javascript file.  */
+/* Active Sections */
 section.your-active-class {
     background: rgb(0, 0, 0);
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
     border: 1px solid #F8F6F45D;
+}
+
+/* Active Navigation Links */ 
+.link-active-class {
+    border: 1px solid #2E0747ED;
+    background: linear-gradient(
+        180deg, 
+        #0000001A 0%, 
+        #2E0747ED 100%);
 }
 
 section.your-active-class .landing__container::before {
