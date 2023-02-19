@@ -1,5 +1,8 @@
+/* Process && #section3 */
 /* Phases of the Development Process */
-/* *** SLIDER *** */
+/* ** DEV PROCESS SLIDER ** */
+
+/* Entire Image Slider Div */ 
 .imgSlider {
     width: 500px;
     height: 300px;
@@ -12,6 +15,7 @@
     border: 1px solid #F8F6F433;
 }
 
+/* Image Slider Container Within Div */
 .imgContainer {
     width: 2500px;
     background-color: #A887F4;
@@ -24,6 +28,7 @@
     transition: left 2s;
 }
 
+/* Individual Slider Images */
 .slides {
     width: 500; 
     height: 300;
@@ -33,31 +38,38 @@
     position: relative;
 }
 
+/* Slider Image One Position */
 #slide-1:target~.imgContainer {
     left: 0px;
 }
 
+/* Slider Image Two Position */
 #slide-2:target~.imgContainer {
     left: -500px;
 }
 
+/* Slider Image Three Position */
 #slide-3:target~.imgContainer {
     left: -1000px;
 }
 
+/* Slider Image Four Position */
 #slide-4:target~.imgContainer {
     left: -1500px;
 }
 
+/* Slider Image Five Position */
 #slide-5:target~.imgContainer {
     left: -2000px;
 }
 
+/* Slider Buttons */
 .imgSliderButtons {
     position: relative;
     top: -32px;
 }
 
+/* Slider Button Anchors */
 .imgSliderButtons a {
     display: inline-block;
     height: 25px;
@@ -70,6 +82,7 @@
     margin: 0 0.1em;
 }
 
+/* Slider Button Anchors On Hover */
 .imgSliderButtons a:hover {
     cursor: pointer;
     background-color: #57088C;
