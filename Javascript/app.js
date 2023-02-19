@@ -13,11 +13,7 @@
  * 
 */
 
-/**
- * Comments should be present at the beginning of each procedure and class.
- * Great to have comments before crucial code sections within the procedure.
-*/
-
+// Listening For Content Load To Complete
 window.addEventListener('DOMContentLoaded', (event) => {
     /**
     * ** GLOBAL VARIABLES **
@@ -32,7 +28,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     // Accessing All '.landing__container' Divs
     const containers = document.querySelectorAll('.landing__container');
 
-    // Getting Position of Contact Section
+    // Accessing Contact Section
     const contactSection = document.getElementById('section5');
 
     /**
@@ -66,13 +62,15 @@ window.addEventListener('DOMContentLoaded', (event) => {
     const displayButton = () => {
         // Retrieving Section Viewport Position
         const contactPosition = contactSection.getBoundingClientRect();
+        // If contactPosition Is Within Frame
         if (contactPosition.top <= 80) {
+            // Display BackToTop Button
             backToTop.style.display = 'block';
         } else {
+            // Hide BackToTop Button
             backToTop.style.display = 'none';
         }
     }
-
     /**
      * ** END HELPER FUNCTIONS **
      * ** BEGIN MAIN FUNCTIONS **
@@ -103,7 +101,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
             navList.append(listItem);
         });
     };
-
     // Build Navigation Menu
     buildNav();
 
@@ -117,7 +114,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
             const id = section.getAttribute('id');
             // Retrieving Navigation Link Target
             const navLink = document.querySelector(`a[href="#${id}"]`);
-
             // Using Position To Check Visibility
             if (position.top <= 80 && position.bottom >= 80) {
                 // Adding 'Active' Class to Section In View
@@ -133,22 +129,27 @@ window.addEventListener('DOMContentLoaded', (event) => {
         });
     };
 
-    // Create Button That Scrolls To Hero
+    // Building Button That Scrolls To Hero
     const createBackToTop = () => {
+        // Creating Button Element
         backToTop = document.createElement('button');
+        // Creating Class on Button Element
         backToTop.classList.add('backToTop__btn');
+        // Creating Attribute On Button Element
         backToTop.setAttribute('href', `#hero`);
+        // Inserting Text On Button Element
         backToTop.innerText = 'BACK TO TOP';
+        // Accessing Page Footer
         const footer = document.querySelector('.page__footer');
-        // Getting Position of Contact Section
+        // Prepending Button To Footer
         footer.prepend(backToTop);
     }
-
+    // Build BackToTop Button
     createBackToTop();
 
     /**
-     * End Main Functions
-     * Begin Events
+     * ** END MAIN FUNCTIONS **
+     * ** BEGIN EVENTS **
      * 
     */
     // Listening For Window Scrolling
@@ -158,8 +159,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
             // Setting Sections as Active
             activateSection(section);
         })
-
-        // Display Back To Top Button Near Bottom
+        // Displaying BackToTop Button
         displayButton();
     });
 
@@ -167,9 +167,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
     navList.addEventListener('click', (event) => {
         // Retrieving Link Attribute
         const navTarget = event.target.getAttribute('href');
-        // Preventing Default Action of Link
+        // Preventing Default Action
         event.preventDefault();
-        // Scrolling to NavLink Attribute
+        // Smooth Scrolling to NavLink Attribute
         document.querySelector(navTarget).scrollIntoView({
             behavior: 'smooth',
         });
@@ -179,9 +179,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
     backToTop.addEventListener('click', (event) => {
         // Retrieving Hero Link Attribute
         const heroTarget = event.target.getAttribute('href');
-        // Preventing Default Action of Link
+        // Preventing Default Action
         event.preventDefault();
-        // Scrolling to NavLink Attribute
+        // Smooth Scrolling to Hero
         document.querySelector(heroTarget).scrollIntoView({
             behavior: 'smooth',
         });
