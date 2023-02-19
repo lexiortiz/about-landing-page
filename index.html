@@ -14,6 +14,8 @@
     />
     <!-- Load Styles -->
     <link href="./CSS/style.css" rel="stylesheet" />
+    <!-- Load Javascript -->
+    <script type="text/javascript" src="/Javascript/app.js"></script>
   </head>
   <body>
     <!-- HTML Follows BEM naming conventions 
@@ -25,7 +27,7 @@
       </nav>
     </header>
     <main>
-      <header class="main__hero">
+      <header class="main__hero" id="hero">
         <p class="page-title">ABOUT ALEXIS ORTIZ</p>
         <h1>
           CREATING SOLUTIONS <br />
@@ -47,7 +49,7 @@
     a data attribute that will populate the li node.
     Adding more sections will automatically populate nav.
     The first section is set to active class by default -->
-      <section id="section1" data-nav="Section 1" class="your-active-class">
+      <section id="section1" data-nav="1" class="your-active-class">
         <div class="landing__container">
           <h2>BIOGRAPHY</h2>
           <p class="sectionOne-copy">
@@ -61,14 +63,14 @@
             eager to explore new opportunities. If you'd like to collaborate,
             please don't hesitate to
             <span
-              ><a href="#contact__container" class="contactText main-link"
+              ><a href="#section5" class="contactText main-link"
                 >contact me.</a
               ></span
             >
           </p>
         </div>
       </section>
-      <section id="section2" data-nav="Section 2">
+      <section id="section2" data-nav="2">
         <div class="landing__container">
           <h2>VALUES</h2>
           <div id="valuesContent">
@@ -100,7 +102,7 @@
           </div>
         </div>
       </section>
-      <section id="section3" data-nav="Section 3">
+      <section id="section3" data-nav="3">
         <div class="landing__container">
           <h2>PROCESS</h2>
           <p>
@@ -180,7 +182,7 @@
           </div>
         </div>
       </section>
-      <section id="section4" data-nav="Section 4">
+      <section id="section4" data-nav="4">
         <div class="landing__container">
           <h2>JOURNEY</h2>
           <div id="journeyContent">
@@ -211,7 +213,7 @@
           </div>
         </div>
       </section>
-      <section id="contact__container" data-nav="Section 5">
+      <section id="section5" data-nav="5">
         <div class="landing__container">
           <h2>CONTACT</h2>
           <p>
@@ -279,7 +281,5 @@
         >
       </p>
     </footer>
-    <!-- Load Javascript -->
-    <script type="text/javascript" src="/Javascript/app.js"></script>
   </body>
 </html>
