@@ -1,16 +1,27 @@
 /* ** ALL MEDIA QUERIES ** */
 /* Media Queries for Small Screens/Phones */
 @media only screen and (max-width: 34em) {
+    /* Navigation Menu */
     .navbar__menu ul {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
     }
-
-    /* Hero Paragraph */
+    /* Main Page Title */
+    .page-title {
+        padding-top: 2em;
+    }
+    /* Hero Header */
+    h1 {
+        font-size: 2em;
+    }
+    /* Hero Section Copy */
     .hero-copy {
-        text-align: center;
         margin: 2em 0 3em 0;
+    }
+    /* Biography Heading */
+    #section1 h2 {
+        font-size: 2.8em;
     }
     /* Contact Inline-Link */
     .contactText {
@@ -20,14 +31,14 @@
         width: 50%;
         text-transform: uppercase;
     }
+    /* Contact Inline-Link On Hover */
     .contactText:hover {
         margin: auto;
     }
-    /* Contact Inline-Link */
+    /* Slider Title */
     #processPhases {
         margin-top: -2em;
     }
-
     /* *** SLIDER *** */
     .imgSlider {
         width: 95vw;
@@ -87,7 +98,10 @@
     .page-title {
         margin: 1.6em 3em 0;
     }
-
+    /* Hero Section Copy */
+    .hero-copy {
+        text-align: justify;
+    }
     /* Main Headers */
     h1 {
         font-size: 3.7em;
@@ -100,5 +114,10 @@
     .landing__container {
         max-width: 50em;
         padding: 4em;
+    }
+
+    /* Contact Info Links */
+    .contact-link {
+        font-size: 1.25em;
     }
 }
