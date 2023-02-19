@@ -23,4 +23,4 @@ I then built a dynamic navigation menu for the landing page by creating the navi
 
 4.) After running the JavaScript code through a linter, I tested the performance of the landing page and found a 4 millisecond improvement from moving the script from the end of the body to the head, and utiziling an event listener on the window when the DOMContentLoaded. Again, I refactored my code for further improvement before testing for responsivity across all devices to ensure there were no bugs or breakdowns in styling. 
 
-5.) It's time to launch! I put in a lot of effort to create this landing page and I'm excited to share it with everyone. I hosted the project on GitHub Pages and linked it to my portfolio as an About page. But I've talked about it enough, see it for yourself here.
+5.) It's time to launch! I put in a lot of effort to create this landing page and I'm excited to share it with everyone. I hosted the project on Netlify and linked it to my portfolio as an About page. But I've talked about it enough, [see it for yourself here](https://about-alexis-ortiz.netlify.app).
