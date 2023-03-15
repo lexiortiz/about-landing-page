@@ -9,7 +9,9 @@
     }
     /* Main Page Title */
     .page-title {
-        padding-top: 2em;
+        padding: 1em 0;
+        margin:  -1em 0.5em;
+        text-align: right;
     }
     /* Hero Header */
     h1 {
@@ -96,7 +98,8 @@
 @media only screen and (min-width: 35em) {
     /* Main Page Title */
     .page-title {
-        margin: 1.6em 3em 0;
+        padding: 1em 0;
+        margin:  0.8em;
     }
     /* Hero Section Copy */
     .hero-copy {
