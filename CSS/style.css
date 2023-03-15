@@ -41,10 +41,8 @@ body {
 
 /* Small Header Title */
 .page-title {
-    font-size: 1.4rem;
-    margin: -1em 1em 0;
+    font-size: 1.6rem;
     font-weight: 600;
-    text-align: left;
     opacity: 0.9;
 }
 
