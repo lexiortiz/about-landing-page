@@ -41,10 +41,10 @@ body {
 
 /* Small Header Title */
 .page-title {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
     margin: -1em 1em 0;
-    font-weight: 500;
-    text-align: right;
+    font-weight: 600;
+    text-align: left;
     opacity: 0.9;
 }
 
@@ -264,6 +264,33 @@ section {
 
 /* Nav List Links On Hover */
 #navbar__list .navbar__link:hover {
+    color: #BEA8F1;
+    transition: ease 0.4s all;
+    cursor: pointer;
+    border: 2px solid #AA96D9;
+}
+
+/* Arrow SVG in Navigation */
+.sharpArrowSvg {
+    max-width: 1rem;
+    padding: 0 0 0 0.6em;
+    opacity: 0.8;
+}
+
+/* Top Nav List Links*/
+.top-nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em 1.4em;
+    font-weight: 500;
+    text-decoration: none;
+    color: #F8F6F4;
+    border: 2px solid transparent;
+}
+
+/* Top Nav List Links On Hover */
+.top-nav-links:hover {
     color: #BEA8F1;
     transition: ease 0.4s all;
     cursor: pointer;
